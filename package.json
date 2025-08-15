@@ -1,5 +1,5 @@
 {
-  "name": "kit-customization",
+  "name": "kit",
   "private": true,
   "scripts": {
     "build": "remix vite:build",

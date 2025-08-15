@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "184c786aaacd56bf8f3747600fa374e7"
-name = "kit-customization"
-handle = "kit-customization-1"
+name = "kit"
+handle = "kit-1"
 application_url = "https://example.com/"
 embedded = true
 
