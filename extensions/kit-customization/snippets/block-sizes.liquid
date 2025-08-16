@@ -1,0 +1,17 @@
+{% assign sizes = "XS,S,M,L,XL,2XL,3XL" | split: "," %}
+
+<div class="kit-section">
+  <div class="kit-section-header">
+    <h4>{{ 'customization.sizes.title' | t }}</h4>
+    <div class="kit-sizes-guide">
+      {% comment %} Size Icon {% endcomment %}
+      <span>{{ 'customization.sizes.guide.title' | t }}</span>
+    </div>
+    {% comment %} Sizes Guide (Modal) {% endcomment %}
+  </div>
+  <div class="container-radio-elements">
+    {% for size in sizes %}
+      {% render 'element-radio', name: size, value: size, title: size, active: false, disabled: true, style: 'style-2' %}
+    {% endfor %}
+  </div>
+</div>

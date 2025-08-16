@@ -1,0 +1,30 @@
+<div id="kit-tab-custom" class="kit-personalization-tab-container active">
+  <div class="kit-input-container">
+    <label class="kit-label" for="kit-name">{{- 'customization.personalization.tabs.custom.name.label' | t -}}</label>
+    <input
+      class="kit-input"
+      type="text"
+      id="kit-name"
+      name="custom_name"
+      placeholder="{{- 'customization.personalization.tabs.custom.name.placeholder' | t -}}"
+      inputmode="text"
+      maxlength="12"
+      pattern="[A-Za-zÜüÁáÉéÍíÓóÚúÀàÈèÌìÒòÙùÖöÑñÂâÊêÎîÔôÛûĈĉĜĝĞğĤĥĴĵŜŝČčÄäËëÏïÜüĆćÃãÕõÇç´^¨,.\s-]+"
+    >
+  </div>
+
+  <div class="kit-input-container">
+    <label class="kit-label" for="kit-number">{{- 'customization.personalization.tabs.custom.number.label' | t -}}</label>
+    <input
+      class="kit-input"
+      type="text"
+      id="kit-number"
+      name="custom_number"
+      maxlength="2"
+      pattern="\d{1,2}"
+      placeholder="{{- 'customization.personalization.tabs.custom.number.placeholder' | t -}}"
+      inputmode="numeric"
+      autocomplete="off"
+    >
+  </div>
+</div>

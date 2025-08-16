@@ -1,0 +1,12 @@
+{% comment %} Pending Mock Equipments {% endcomment %}
+{% assign section_header = 'customization.products.title' | t %}
+{% assign equipments = '[]' %}
+
+<div class="kit-section">
+  {% render 'component-section-header', section_title: section_header, price_value: '119,99€' %}
+  <div>
+    {% for item in equipments %}
+      {% render 'component-equipment-item', equipment: item %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{{ 'index.css' | asset_url | stylesheet_tag }}
+{{ 'kit.css' | asset_url | stylesheet_tag }}
+{{ 'fonts.css' | asset_url | stylesheet_tag }}
+
+<div>
+  <h2>{{ 'customization.title' | t }}</h2>
+  <div class="kit-container">
+    {% render 'block-media' %}
+    <div class="kit-container-customization">
+      {% render 'block-equipment' %}
+      {% render 'block-gender' %}
+      {% render 'block-sizes' %}
+      {% render 'block-personalization' %}
+      {% render 'block-competition' %}
+      {% render 'block-add-to-cart' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kit",
+  "target": "section",
+  "settings": []
+}
+{% endschema %}

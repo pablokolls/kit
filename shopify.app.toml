@@ -1,31 +1,24 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "184c786aaacd56bf8f3747600fa374e7"
+client_id = "e2adef69e045ba4ce9230d650542e31a"
 name = "kit"
-handle = "kit-1"
-application_url = "https://example.com/"
+handle = "kit-2"
+application_url = "https://aims-has-photographers-silver.trycloudflare.com"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-07"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = ["https://aims-has-photographers-silver.trycloudflare.com/auth/callback", "https://aims-has-photographers-silver.trycloudflare.com/auth/shopify/callback", "https://aims-has-photographers-silver.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false

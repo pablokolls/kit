@@ -1,0 +1,29 @@
+<select
+  name="{{ name }}"
+  id="{{ name }}"
+  class="select-input"
+  {% if disabled %}
+    disabled
+  {% endif %}
+>
+  {% if default != blank %}
+    <option
+      value="{{ default }}"
+      {% if default == selected %}
+        selected
+      {% endif %}
+    >
+      {{ default }}
+    </option>
+  {% endif %}
+  {% for option in options %}
+    <option
+      value="{{ option }}"
+      {% if option == selected %}
+        selected
+      {% endif %}
+    >
+      {{ option }}
+    </option>
+  {% endfor %}
+</select>

@@ -1,0 +1,17 @@
+{% assign section_title = 'customization.personalization.title' | t %}
+
+<div class="kit-section">
+  {% render 'component-section-header', section_title: section_title, price_value: '+20€' %}
+  <div class="kit-personalization-tabs">
+    <button class="kit-personalization-tab active">
+      {{ 'customization.personalization.tabs.player.title' | t }}
+    </button>
+    <button class="kit-personalization-tab">
+      {{ 'customization.personalization.tabs.custom.title' | t }}
+    </button>
+  </div>
+  <div class="kit-tab-content">
+    {% render 'component-tab-player' %}
+    {% render 'component-tab-custom' %}
+  </div>
+</div>

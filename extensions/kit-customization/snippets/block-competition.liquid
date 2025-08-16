@@ -1,0 +1,18 @@
+{% assign competitions = 'La Liga,UCL,Europa League' | split: ',' %}
+{% assign section_header = 'customization.competition.title' | t %}
+
+<div class="kit-section">
+  {% render 'component-section-header', section_title: section_header, price_value: '+00€' %}
+  <div class="container-radio-elements">
+    {% for competition in competitions %}
+      {% render 'element-radio',
+        name: competition,
+        value: competition,
+        title: competition,
+        active: true,
+        disabled: false,
+        style: 'style-2'
+      %}
+    {% endfor %}
+  </div>
+</div>
