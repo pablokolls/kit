@@ -1,41 +1,31 @@
-# 05. Building Block View
+# 5. Building Block View
 
-## Sub-Application 1
-### Containers (Level 1)
-- Frontend App 1
-- Backend App 1
-- Database App 1
+## 5.1 Level 1 (System Overview – C4 Container Diagram)
+- **Kit Customization App**
+  - Admin Extension (Polaris UI)
+  - Theme Extension (Liquid component)
+  - Remix Backend API
+  - PostgreSQL Database
 
-### Components (Level 2)
-- Auth Service App 1
-- Image Generation Engine App 1
-- Customization Modules App 1
+## 5.2 Level 2 (Main Components – C4 Component Diagram)
+- **Remix Backend**
+  - Auth Controller (Shopify OAuth)
+  - Admin API Controller (customization config)
+  - Storefront API Proxy (fetch product data, stock, pricing)
+  - Validation Module (blacklist checks, input sanitization)
+  - Persistence Layer (Prisma + PostgreSQL)
 
-### Code (Level 3)
-- Critical classes/functions inside components App 1
+- **Admin Extension**
+  - Config UI
+  - Product Selection
+  - Customization Rules Management
 
-### Recommended C4 Diagrams
-- Container Diagram App 1: ![Container Diagram](#)
-- Component Diagram App 1: ![Component Diagram](#)
-- Code Diagram App 1: ![Code Diagram](#)
+- **Theme Extension**
+  - UI Renderer (Liquid block)
+  - Cart Integration
+  - Live Preview
 
----
-
-## Sub-Application 2
-### Containers (Level 1)
-- Frontend App 2
-- Backend App 2
-- Database App 2
-
-### Components (Level 2)
-- Auth Service App 2
-- Image Generation Engine App 2
-- Customization Modules App 2
-
-### Code (Level 3)
-- Critical classes/functions inside components App 2
-
-### Recommended C4 Diagrams
-- Container Diagram App 2: ![Container Diagram](#)
-- Component Diagram App 2: ![Component Diagram](#)
-- Code Diagram App 2: ![Code Diagram](#)
+## 5.3 Level 3 (Code/Modules – C4 Code Diagram)
+- Prisma schema (models: Product, CustomizationOption, Blacklist, UserRoles)
+- Liquid components (CustomizerUI, Preview, CartButton, OptionSelector)
+- Node.js services (AuthService, ValidationService, ProductService)
